@@ -31,40 +31,39 @@ def get_user_input():
     print("Use this interface to calculate the carb content of dry cat food.\n")
     print("Please enter the respective percentage from your cat food label,")
     print("using dot as decimal separator")
-    print("Example: Crude Protein/Protein in %: 12.5")
+    print("Example: Crude Protein/Protein in %: 12.5\n")
 
     data = []
 
     while True:
 
-        protein = float(input("Enter crude protein/protein in %:\n"))
-        fat = float(input("Enter crude fat/fat in %:\n"))
-        fiber = float(input("Enter crude fiber/fiber in %:\n"))
-        ash = float(input("Enter ash in %:\n"))
-        moisture = float(input("Enter moisture in %:\n"))
+        try:
+            protein = float(input("Enter crude protein/protein in %:\n"))
+            fat = float(input("Enter crude fat/fat in %:\n"))
+            fiber = float(input("Enter crude fiber/fiber in %:\n"))
+            ash = float(input("Enter ash in %:\n"))
+            moisture = float(input("Enter moisture in %:\n"))
 
-        data.append(protein + fat + fiber + ash + moisture)
+        except ValueError as e:
+            print("Please enter a valid number.")
+            continue
+
+        food_label = [protein, fat, fiber, ash, moisture]
+
+        data.extend(food_label)
 
         carbs = 100 - (protein + fat + fiber + ash + moisture)
         data.append(carbs)
 
-        print(f"The cat food contains {carbs} % carbs.")
+        print(f"The cat food contains {carbs} % carbs.\n")
+        print(data)
 
-        choice = input("Would you like to check another product? ( y / n ) : ")
+        choice = input("Would you like to check another product? ( y / n ) : \n")
         if choice.casefold() == 'n':
             break
 
 get_user_input()
 
-
-def validate_input(values):
-    try:
-        protein, fat, fiber, ash, moisture = str(protein, fat, fiber, ash, moisture)
-    except:
-        print("Please enter a valid number.")
-        return False
-
-    return True
 
 def calculate_carbs():
     carbs = 100 - food_data
