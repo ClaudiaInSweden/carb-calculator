@@ -21,63 +21,59 @@ data = compare.get_all_values()
 Information for user what this project is about
 """
 
+print("\nWelcome to the carbohydrate calculator for cat food!\n")
+print("Most cat foods don't have the carb content listed but")
+print("for people with obese and diabetic cats it's important to know")
+print("how much carbs the food contains.\n") 
+print("Use this interface to calculate the carb content of dry cat food.\n")
+print("Please enter the respective percentage from your cat food label,")
+print("using dot as decimal separator")
+print("Example: Crude Protein/Protein in %: 12.5\n")
 
-def get_user_input():
+
+
+def get_user_input(var):
    
-    print("\nWelcome to the carbohydrate calculator for cat food!\n")
-    print("Most cat foods don't have the carb content listed but")
-    print("for people with obese and diabetic cats it's important to know")
-    print("how much carbs the food contains.\n") 
-    print("Use this interface to calculate the carb content of dry cat food.\n")
-    print("Please enter the respective percentage from your cat food label,")
-    print("in the following order:\n")
-    print("Protein, fat, fiber, ash, moisture (if there is no figure for moisture, take 8)\n,")
-    print("Use a dot as decimal separator and a comma to separate the numbers.")
-    print("Example: 37, 12, 6.1, 8.1, 8\n")
-
     while True:
-        
-        food_content = input("Enter percentages of protein, fat, fiber, ash and moisture as described above: \n")
-        food_data = food_content.split(',')
-        for i in range(len(food_data)):
-            food_data[i] = float(food_data[i])
-    return food_data
-      
-def validate_input(values):
 
-    try:
-        if len(values) != 5:
-            raise ValueError(
-                print("Please enter figures for protein, fat, fiber, ash and moisture!")
-            )
-    except ValueError as e:
-        print("Value Error! Please enter a valid number.\n")
-        return False
-    except TypeError as e:
-        print("Type Error! Please enter only numbers.\n")
-        return False
+        value = input("Enter {} in %: ".format(var))
+        try:
+            return float(value)
+        except ValueError:
+            print("Value Error! Please enter a valid number.\n")
+            continue
 
-    return True
-                
+protein = get_user_input("protein")
+fat = get_user_input("fat")
+fiber = get_user_input("fiber")
+ash = get_user_input("ash")
+moisture = get_user_input("moisture")
+
+data = [protein, fat, fiber, ash, moisture]
+
+print(data)
+calculate_carbs()
 
 def calculate_carbs():
-    carbs = 100 - food_data
+    carbs = 100 - data
     print(f"The cat food contains {carbs} % carbs.")
-    food_data.append(carbs)
-    user_choice_continue()
-    print(food_data)
+    data.append(carbs)
 
+print(data)
+
+    
 def user_choice_continue():
 
-    choice = input("Would you like to check another product? ( y / n ) : \n")
-    if choice.casefold() == 'n':
-        break
-        
+    while True:
+        choice = input("Would you like to check another product? ( y / n ) : \n")
+        if choice.casefold() == 'n':
+            break
+    calculate_carbs()
             
 def main():
-    get_user_input()
-    validate_input(values)
+    get_user_input(var)
     calculate_carbs()
+    user_choice_continue()  
     
 
 
@@ -85,7 +81,7 @@ def main():
 """
 Enable user to see the comparison of the entered items
 """
-print("To see the compilation of the cat food you entered, use (ctrl + click) to open the link:")
+print("\nTo see the compilation of the cat food you entered, use (ctrl + click) to open the link:")
 
 print('\033]8;;https://docs.google.com/spreadsheets/d/1nvKyRNOHlLlbLtARXVFYgILkAPpbYJ-Ywku7EwrQzts/edit?usp=sharing/\033\\Open the comparison\033]8;;\033\\\n')
 
