@@ -49,17 +49,19 @@ fiber = get_user_input("fiber")
 ash = get_user_input("ash")
 moisture = get_user_input("moisture")
 
-data = [protein, fat, fiber, ash, moisture]
+subtotal = protein + fat + fiber + ash + moisture
 
-print(data)
-calculate_carbs()
+print(subtotal)
 
-def calculate_carbs():
-    carbs = 100 - data
+def calculate_carbs(subtotal):
+    carbs = 100 - subtotal
     print(f"The cat food contains {carbs} % carbs.")
-    data.append(carbs)
+    return carbs
 
-print(data)
+carb_result = calculate_carbs(subtotal)
+food_content = [protein, fat, fiber, ash, moisture, carb_result]
+print(food_content)
+
 
     
 def user_choice_continue():
@@ -68,7 +70,7 @@ def user_choice_continue():
         choice = input("Would you like to check another product? ( y / n ) : \n")
         if choice.casefold() == 'n':
             break
-    calculate_carbs()
+    get_user_input(var)
             
 def main():
     get_user_input(var)
