@@ -1,3 +1,6 @@
+""" 
+Import libraries and connect to Google spreadsheets
+"""
 import gspread
 from google.oauth2.service_account import Credentials
 import webbrowser
@@ -18,9 +21,8 @@ compare = SHEET.worksheet('compare')
 data = compare.get_all_values()
 
 """
-Information for user what this project is about
+Information for user what this project is about incl. instructions
 """
-
 print("\nWelcome to the carbohydrate calculator for cat food!\n")
 print("Most cat foods don't have the carb content listed but")
 print("for people with obese and diabetic cats it's important to know")
@@ -30,7 +32,12 @@ print("Please enter the respective percentage from your cat food label,")
 print("using dot as decimal separator")
 print("Example: Crude Protein/Protein in %: 12.5\n")
 
-
+"""
+Get food content data from user.
+Five inputs need to be done. Inputs are converted to floats
+and validated. A while loop runs until all five entered
+values are valid.
+"""
 
 def get_user_input(var):
    
@@ -49,10 +56,15 @@ fiber = get_user_input("fiber")
 ash = get_user_input("ash")
 moisture = get_user_input("moisture")
 
+"""
+We need the sum of the entered values to calculate the carb content
+"""
 subtotal = protein + fat + fiber + ash + moisture
-
-print(subtotal)
-
+"""
+We calculate the carb content by subtracting the total of the 
+entered values from 100 percent and print the result of the
+calculation to the terminal.
+"""
 def calculate_carbs(subtotal):
     carbs = 100 - subtotal
     print(f"The cat food contains {carbs} % carbs.")
@@ -62,23 +74,25 @@ carb_result = calculate_carbs(subtotal)
 food_content = [protein, fat, fiber, ash, moisture, carb_result]
 print(food_content)
 
+"""
+We ask the user if the user wants to enter further data. If no, the loop breaks.
+If yes or any other key is pressed, the user is asked to once more enter the
+five values.
+"""    
+# Choice y not working!!!
 
-    
 def user_choice_continue():
-
+    
     while True:
-        choice = input("Would you like to check another product? ( y / n ) : \n")
+        choice = input("Would you like to check another product? ( y / n ) : ")
         if choice.casefold() == 'n':
             break
-    get_user_input(var)
+        else: 
+            confirmation = get_user_input(var)
+
+user_choice_continue()
             
-def main():
-    get_user_input(var)
-    calculate_carbs()
-    user_choice_continue()  
-    
-
-
+# Add data to excel sheet not yet created!!!
 
 """
 Enable user to see the comparison of the entered items
