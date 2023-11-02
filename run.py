@@ -30,48 +30,52 @@ def get_user_input():
     print("how much carbs the food contains.\n") 
     print("Use this interface to calculate the carb content of dry cat food.\n")
     print("Please enter the respective percentage from your cat food label,")
-    print("using dot as decimal separator")
-    print("Example: Crude Protein/Protein in %: 12.5\n")
-
-    data = []
+    print("in the following order:\n")
+    print("Protein, fat, fiber, ash, moisture (if there is no figure for moisture, take 8)\n,")
+    print("Use a dot as decimal separator and a comma to separate the numbers.")
+    print("Example: 37, 12, 6.1, 8.1, 8\n")
 
     while True:
+        
+        food_content = input("Enter percentages of protein, fat, fiber, ash and moisture as described above: \n")
+        food_data = food_content.split(',')
+        for i in range(len(food_data)):
+            food_data[i] = float(food_data[i])
+    return food_data
+      
+def validate_input(values):
 
-        try:
-            protein = float(input("Enter crude protein/protein in %:\n"))
-            fat = float(input("Enter crude fat/fat in %:\n"))
-            fiber = float(input("Enter crude fiber/fiber in %:\n"))
-            ash = float(input("Enter ash in %:\n"))
-            moisture = float(input("Enter moisture in %:\n"))
+    try:
+        if len(values) != 5:
+            raise ValueError(
+                print("Please enter figures for protein, fat, fiber, ash and moisture!")
+            )
+    except ValueError as e:
+        print("Value Error! Please enter a valid number.\n")
+        return False
+    except TypeError as e:
+        print("Type Error! Please enter only numbers.\n")
+        return False
 
-        except ValueError as e:
-            print("Please enter a valid number.")
-            continue
-
-        food_label = [protein, fat, fiber, ash, moisture]
-
-        data.extend(food_label)
-
-        carbs = 100 - (protein + fat + fiber + ash + moisture)
-        data.append(carbs)
-
-        print(f"The cat food contains {carbs} % carbs.\n")
-        print(data)
-
-        choice = input("Would you like to check another product? ( y / n ) : \n")
-        if choice.casefold() == 'n':
-            break
-
-get_user_input()
-
+    return True
+                
 
 def calculate_carbs():
     carbs = 100 - food_data
-    print(f"The cat food contains {carbs} % carbs.")  
+    print(f"The cat food contains {carbs} % carbs.")
+    food_data.append(carbs)
+    user_choice_continue()
+    print(food_data)
 
+def user_choice_continue():
+
+    choice = input("Would you like to check another product? ( y / n ) : \n")
+    if choice.casefold() == 'n':
+        break
+        
             
 def main():
-    get_user_input(food_data)
+    get_user_input()
     validate_input(values)
     calculate_carbs()
     
