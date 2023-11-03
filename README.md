@@ -29,6 +29,7 @@ End business goal: The users' cat lives a long and healthy life.
 ### Start
 
 - When starting the Heroku app the user finds information about what the tool is about. 
+
 ![Start](views/assets/readme-docs/carb-calc-start.png)
 
 ### Input
@@ -39,10 +40,13 @@ End business goal: The users' cat lives a long and healthy life.
 
 ### Calculation
 
-When the above mentioned values are entered correctly, the tool calculates and carb content which is displayed to the user.
+When the above mentioned values are entered correctly, the tool calculates the carb content which is displayed to the user.
 
 ![Input and calculation result](views/assets/readme-docs/calc-input.png)
 
+### Run Program
+
+When the user clicks on the Run Program-button the entries will be reset and the user is prompted to enter the data from the cat food label.
 
 
 ## Future Features
@@ -108,87 +112,53 @@ TO BE UPDATED!!!
 
 ## Browser Testing
 
-Functionality, links, layout, and responsiveness were tested with the following browsers without any issues:
+Functionality was tested with the following browsers without any issues:
 
-- Microsoft Edge Version 117.0.2045.47
+- Microsoft Edge Version 118.0.2088.76
 - Firefox Version 118.0.1
 - Brave Version 1.58.135
 - Google Chrome Version 116.0.5845.188
   
-## Device Testing
-
-Functionality, links, layout, and responsiveness were tested on the following devices without any issues:
-
-- Dell Laptop 14" / 1920px x 1080px
-- HP Laptop 17" / 1920px x 1080px
-- Dell Screen 24" / 1920px x 1080px
-- Samsung Galaxy 22S Ultra / 3088px x 1440px
-- iPhone 8 / 1334px × 750px
-
 ### Findings under testing
 
-- As users might want to receive information about more than one topic, checkboxes were initially used on the Contact us page. However, after some trials and Google research it turned out that this feature requires Javascript which was not part of the course so far.
+- Even though inputs were entered with only one decimal, the calculation showed a result with 8 decimals so the round-method was used to limit the number of decimals to 1 in the calculation result.
 
 ## Deployment
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
+- The repository was created on GitHub using the template provided by Code Institute. 
+- Code was written using GitPod. No additional libraries needed to be imported.
+- Deployment followed the instructions from Code Institute:
+    - Add new line character and the end of the text inside the input method
+    - Create list of requirements
+    - Create new app on Heroku platform
+    - Add Config Var in Heroku's settings
+    - Add buildpacks Python and Node.js
+    - Choose deployment method
+    - Connect to GitHub
+    - Deploy
 
-- In the GitHub repository, navigate to the Settings tab
-- From the source section drop-down menu, select the Main Branch
-- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-  
-The live link can be found here - <https://claudiainsweden.github.io/visit-jarbo/>
+ 
+The live link to the app can be found here: 
+[Carb Calculator for Dry Cat Food](https://cat-food-carb-calculator-6b47be69c58d.herokuapp.com/)
 
 ## Credits
 
 ### Content
 
-Idea, content and text are developed by myself.
+Inspiration and calculation formula from the following websites that contain carb calculators:
+- [NfE-Rechner für Diabetes-Katzen](https://nfe-rechner.de/)
+- [petMD](https://www.petmd.com/blogs/nutritionnuggets/cat/jcoates/2013/sept/calculating-carbohydrates-in-your-cats-food-30887)
 
-Inspiration for the layout from walkthrough project "Love Running" and default SharePoint page layouts.
-
-- Detailed information about what kind of fish there is to catch from [iFiske](https://www.ifiske.se/en/fishing-harnen-holmsjon-langsjon-m-fl-vatten.htm).
-- Information about percentage of forest in Sweden taken from [Visit Sweden](https://visitsweden.com/what-to-do/nature-outdoors/forest-bathing/).
-- Information about percentage of lakes in Sweden taken from [Skogskunskap/Forest knowledge](https://www.skogskunskap.se/hansyn/vatten-och-mark/om-hansyn-till-vatten-och-mark/vatten-i-sverige/)
-- Information about what animals can be seen at Wild Nordic taken from [Wild Nordic](https://wildnordic.se/en/home/)
-- Icons from [Font Awesome](https://fontawesome.com/)
-- Vector graphic for Favicon from [Vecteezy](https://www.vecteezy.com/)
-- Fonts from [Google Fonts](https://fonts.google.com/)
-- Images converted to webp with [Birme](https://www.birme.net/)
-
-### Media
-
-All images showing "nature only" are photos taken by myself.
-Images including animals are from free sources as listed below:
-
-- Bear images: Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zdeněk Macháček</a> on <a href="https://unsplash.com/photos/Pt3asvL65Mg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Lynx image: Photo by <a href="https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Glen Hooper</a> on <a href="https://unsplash.com/photos/8LWtpfhGP4U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Fox image: Photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vincent van Zalinge</a> on <a href="https://unsplash.com/photos/cHhPjhOe8LA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Moose image: Photo by <a href="https://unsplash.com/@thejohnnyme?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nikola Johnny Mirkovic</a> on <a href="https://unsplash.com/photos/VFgxrL65zNI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-- Deer image: Photo by <a href="https://unsplash.com/@lassenystedtfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lasse Nystedt</a> on <a href="https://unsplash.com/photos/FftpQKKGxOc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-### Code
-
-Initially, a lot of the code was copied from the Walkthrough project "Love Running" and changed during the project to fit this site.
-
-- Copied Asterisk wildcard selector from the Walkthrough project "Love Running"
-- Header & navigation copied from the Walkthrough project "Love Running"
-- Footer copied from the Walkthrough project "Love Running"
-- Gallery copied from the Walkthrough project "Love Running"
-- Contact us page copied from the Walkthrough project "Love Running"
-- Index page copied from the Walkthrough project "Love Running"
-  
-  #### Inspiration and tutorials used from
-
-  - [W3Schools](https://www.w3schools.com/)
-  - [Mdn Web Docs](<https://developer.mozilla.org/en-US/>)
-  - [Stack overflow](https://stackoverflow.com/)
-  - Code Institute Slack Channel
-    - Special thanks to Craig Hudson, my fellow student Niclas Hugdahl, and my mentor Rohit Sharma
+Information about cat diets in chapter "Project purpose":
+- [VetMed Texas A&M University](https://vetmed.tamu.edu/news/pet-talk/cats-are-carnivores-so-they-should-eat-like-one/)
 
 
-  #### Templates and tutorial for creating the readme-file
+ 
+### Inspiration, support and tutorials from
 
-  - [bezebee - My First Project](https://github.com/bezebee/My-First-Project/blob/main/README.md)
-  - [Drupal Wiki](https://www.drupal.org/docs/develop/managing-a-drupalorg-theme-module-or-distribution-project/documenting-your-project/readmemd-template)
-  - [GitHub Docs](https://docs.github.com/en)
+- Code Institute Tutor Assistance
+- Code Institute Instruction video for deployment to Heroku
+- [American Pizza Order System](https://american-pizza-order-system.herokuapp.com/) for changing html background
+- [Stack overflow](https://stackoverflow.com/)
+- Special thanks to my fellow student Elina, and my mentor Rohit Sharma
+
