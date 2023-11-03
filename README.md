@@ -94,7 +94,7 @@ TO BE UPDATED!!!
 |Input area  |   |  |
 | Input  | The user enters a positive integer  | The number is displayed below the enter command |
 | Input  | The user enters a decimal number, with dot as separator  | The number is displayed below the enter command |
-| Input  | The user enters a decimal number, with comma as separator  | The number is displayed below the enter command |
+| Input  | The user enters a decimal number, with comma as separator  | An error is displayed: "Value Error! Please efter a number between 1 and 99 |
 | Input  | The user enters a number  | The number is displayed below the enter command |
 | Input  | The user enters a number  | The number is displayed below the enter command |
 

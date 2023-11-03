@@ -31,7 +31,7 @@ def get_user_input(var):
             else:
                 print("Please enter a number between 1 and 99.\n")
         except ValueError as e:
-            print("Value Error! Please enter a number between 1 and 99.\n")
+            print("Value Error! Please enter a valid number.\n")
             continue
 
 
