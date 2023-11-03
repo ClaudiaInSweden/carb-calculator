@@ -1,8 +1,11 @@
 def display_instructions():
     """
     Information for user what this project is about incl. instructions
+    what kind of input is expected.
     """
-    print("\nWelcome to the carbohydrate calculator for cat food!\n")
+    print("\n####################################################\n")
+    print("Welcome to the carbohydrate calculator for cat food!\n")
+    print("####################################################\n")
     print("Most cat foods don't have the carb content listed but")
     print("for people with obese and diabetic cats it's important to know")
     print("how much carbs the food contains.\n") 
@@ -13,7 +16,8 @@ def display_instructions():
 
 def get_user_input(var):
     """
-    Get food content data from user.
+    Get food content data from user. Input labels are taken from
+    variables defines in calculate_carbs_in_cat_food function.
     Five inputs need to be done. Inputs are converted to floats
     and validated. A while loop runs until all five entered
     values are valid.
@@ -40,6 +44,9 @@ def calculate_carbs(subtotal):
     return carbs
 
 def calculate_carbs_in_cat_food():
+    """
+    The following variables are taken as input from the user:
+    """
     protein = get_user_input("protein")
     fat = get_user_input("fat")
     fiber = get_user_input("fiber")
@@ -51,7 +58,10 @@ def calculate_carbs_in_cat_food():
     subtotal = protein + fat + fiber + ash + moisture
     carb_result = calculate_carbs(subtotal)
     food_content = [protein, fat, fiber, ash, moisture, carb_result]
-    print(food_content)
-
+    
 if __name__ == '__main__':
+    """
+    Executes code when file runs as a script
+    """
+    display_instructions()
     calculate_carbs_in_cat_food()
