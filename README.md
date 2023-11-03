@@ -34,9 +34,7 @@ End business goal: The users' cat lives a long and healthy life.
 
 ### Input
 
-- When starting the Heroku app the user finds information about what the tool is about. The user is required to enter percentages of protein, fat, fiber, ash and moisture which can be found on the cat food packages.  ### Input
-
-- When starting the Heroku app the user finds information about what the tool is about. The user is required to enter percentages of protein, fat, fiber, ash and moisture which can be found on the cat food packages.   
+- The user is required to enter percentages of protein, fat, fiber, ash and moisture which can be found on the cat food packages.   
 
 ### Calculation
 
@@ -55,7 +53,7 @@ While the current version is fully functional, there are some ideas for future d
 
 - Enable the user to enter product name
 - Enable user to save the result
-- Enable user to save multiple result for comparison
+- Enable user to save multiple results for comparison
 - Add calculation for wet cat food 
 - Add calculation for dog food
 
@@ -72,12 +70,14 @@ While the current version is fully functional, there are some ideas for future d
 
 #### Python
 
-No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
-[CI Python Linter Validation Result](views/assets/readme-docs/ci-python-linter.png)
+- No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+![CI Python Linter Validation Result](views/assets/readme-docs/ci-python-linter.png)
 
 
-Two hints were returned when passing through the [Python Checker](https://www.pythonchecker.com/) but these are irrelevant as they concern text that is displayed to the user.
-[Python Checker Validation Result](views/assets/readme-docs/python-checker.png)
+- Two hints were returned when passing through the [Python Checker](https://www.pythonchecker.com/) but these are irrelevant as they concern text that is displayed to the user.
+
+![Python Checker Validation Result](views/assets/readme-docs/python-checker.png)
 
 
 ### Manual Testing
