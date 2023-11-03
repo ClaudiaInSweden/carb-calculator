@@ -68,7 +68,7 @@ While the current version is fully functional, there are some ideas for future d
 
 ### Validator Testing
 
-#### Python
+
 
 - No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
@@ -82,7 +82,6 @@ While the current version is fully functional, there are some ideas for future d
 
 ### Manual Testing
 
-TO BE UPDATED!!!
 
 #### Features Testing
 
@@ -94,15 +93,19 @@ TO BE UPDATED!!!
 |Input area  |   |  |
 | Input  | The user enters a positive integer  | The number is displayed below the enter command |
 | Input  | The user enters a decimal number, with dot as separator  | The number is displayed below the enter command |
-| Input  | The user enters a decimal number, with comma as separator  | An error is displayed: "Value Error! Please efter a number between 1 and 99 |
-| Input  | The user enters a number  | The number is displayed below the enter command |
-| Input  | The user enters a number  | The number is displayed below the enter command |
+| Input  | The user enters a decimal number, with comma as separator  | An error is displayed: "Value Error! Please efter a valid number." |
+| Input  | The user enters a negative number  | An error is displayed: "Please enter a number between 1 and 99." |
+| Input  | The user enters a number, larger than 99  | An error is displayed: "Please enter a number between 1 and 99." |
+| Input  | The user enters letters  | An error is displayed: "Value Error! Please efter a valid number." |
+| Input  | The user enters a number and a character | An error is displayed: "Value Error! Please efter a valid number." |
+| Calculation  | When all five values are entered correct the carb content is calculated | The result is shown below the input: "The cat food contains xx % carbs." |
+| Run Program  | Click | The input and result are deleted and the user can start to enter new data |
+
+![Input error testing](views/assets/readme-docs/errors.png)
 
 
 
-
-
-## Browser Testing
+### Browser Testing
 
 Functionality was tested with the following browsers without any issues:
 
@@ -118,6 +121,7 @@ Functionality was tested with the following browsers without any issues:
 ## Deployment
 
 - The repository was created on GitHub using the template provided by Code Institute. 
+- New workspace was created on GitPod using the repository link from GitHub
 - Code was written using GitPod. No additional libraries needed to be imported.
 - Deployment followed the instructions from Code Institute:
     - Add new line character and the end of the text inside the input method
