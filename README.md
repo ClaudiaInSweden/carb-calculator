@@ -41,17 +41,7 @@ End business goal: The users' cat lives a long and healthy life.
 
 When the above mentioned values are entered correctly, the tool calculates and carb content which is displayed to the user.
 
-![Home Page](assets/readme-docs/home.webp)
-
-
-
-
-
-### Contact us
-
-The Contact us page enables users to request more information about outdoor activities, listed on the activities page. It includes fields for name, email, and radio buttons to select.
-
-![Contact us Page](assets/readme-docs/contact.webp)
+![Input and calculation result](views/assets/readme-docs/calc-input.png)
 
 
 
@@ -59,77 +49,36 @@ The Contact us page enables users to request more information about outdoor acti
 
 While the current version is fully functional, there are some ideas for future development:
 
-- Include map and directions
-- Add more information about the location
-- Add customer review connectivity (Tripadvisor, Google, or similar)
-- Add accommodation information & booking possibility
-- Add more service providers
-- Add live view & live weather conditions
-
-## Typography and color scheme
-
-The color scheme was selected to represent the prominent colors in nature: brown and green, which also harmonize very well with the images used on the site. These colors are often associated with warmth, comfort, and steadiness and are therefore well suited for a site that aims to attract people who seek recreation and nature experiences.
-
-Typography was chosen because of its soft and rounded letters that reflect a more calm or even old-fashioned style but are easy readable.
-Fonts Capriola and Merriweather from [Fontawesom](https://fontawesome.com/).
+- Enable the user to enter product name
+- Enable user to save the result
+- Enable user to save multiple result for comparison
+- Add calculation for wet cat food 
+- Add calculation for dog food
 
 ## Technology
 
-- IDE: Code Anywhere
+- IDE: GitPod
 - Repository: GitHub
-- Image editor: SnagIt
-- Image converter: [Birme](<https://www.birme.net/>)
-- Favicon generator:[Favicon Generator](https://favicon.io/)
-  
+- Deployment: Heroku
 
 
 ## Testing
 
 ### Validator Testing
 
-#### HTML
+#### Python
 
-No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/).
+[CI Python Linter Validation Result](views/assets/readme-docs/ci-python-linter.png)
 
-#### CSS
 
-No errors were found when passing through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator
+Two hints were returned when passing through the [Python Checker](https://www.pythonchecker.com/) but these are irrelevant as they concern text that is displayed to the user.
+[Python Checker Validation Result](views/assets/readme-docs/python-checker.png)
 
-#### Google Chrome Lighthouse Reports
-
-These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of [Visit Järbo](https://claudiainsweden.github.io/visit-jarbo/index.html).
-
-The tests were executed using the Google Chrome browser's DevTools.
-All pages score very high in all areas. Details for each page can be found by clicking the expand button.
-![Lighthouse score](assets/readme-docs/Lighthouse-score.webp)
-
-<details>
-<summary>Lighthouse Report for page Home</summary>
-
-![Performance Home](assets/readme-docs/lighthouse_home.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Nature</summary>
-![Performance Nature](assets/readme-docs/lighthouse_nature.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Activities</summary>
-![Performance Activities](assets/readme-docs/lighthouse_activities.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Gallery</summary>
-![Performance Gallery](assets/readme-docs/lighthouse_gallery.webp)
-</details>
-
-<details>
-<summary>Lighthouse Report for page Contact us</summary>
-![Performance Contact us](assets/readme-docs/lighthouse_contact.webp)
-</details>
 
 ### Manual Testing
+
+TO BE UPDATED!!!
 
 #### Features Testing
 

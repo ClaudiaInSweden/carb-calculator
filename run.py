@@ -1,7 +1,7 @@
 def display_instructions():
     """
     Information for user what this project is about incl. instructions
-    what kind of input is expected.
+    about what kind of input is expected.
     """
     print("\n####################################################\n")
     print("Welcome to the carbohydrate calculator for cat food!\n")
@@ -11,8 +11,8 @@ def display_instructions():
     print("how much carbs the food contains.\n")
     print("Use this interface to calculate the carb content of cat food.\n")
     print("Please enter the respective percentage from your cat food label,")
-    print("using dot as decimal separator")
-    print("Example: Crude Protein/Protein in %: 12.5\n")
+    print("using dot as decimal separator and confirm with ENTER.\n")
+    print("Example: Protein in %: 12.5\n")
 
 
 def get_user_input(var):
@@ -29,7 +29,7 @@ def get_user_input(var):
             if 0 <= value <= 99:
                 return value
             else:
-                print("Please enter a number between 0 and 100.")
+                print("Please enter a number between 0 and 100.\n")
         except ValueError as e:
             print("Value Error! Please enter a number between 0 and 100.\n")
             continue
@@ -44,12 +44,12 @@ def calculate_carbs(subtotal):
     carbs = 100 - subtotal
     carbs_rounded = round(carbs, 1)
     print(f"\nThe cat food contains {carbs_rounded} % carbs.\n")
-    return carbs-carbs_rounded
+    return carbs_rounded
 
 
 def calculate_carbs_in_cat_food():
     """
-        The following variables are taken as input from the user:
+    The following variables are taken as input from the user:
     """
     protein = get_user_input("protein")
     fat = get_user_input("fat")
@@ -62,10 +62,14 @@ def calculate_carbs_in_cat_food():
     carb_result = calculate_carbs(subtotal)
     food_content = [protein, fat, fiber, ash, moisture, carb_result]
 
+    print("\n#############################################################\n")
+    print("Click on RUN PROGRAM on the top to calculate another product!")
+    print("\n#############################################################\n")
+
 
 if __name__ == '__main__':
     """
-        Executes code when file runs as a script
+    Executes code when file runs as a script
     """
     display_instructions()
     calculate_carbs_in_cat_food()
