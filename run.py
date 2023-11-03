@@ -20,7 +20,7 @@ def get_user_input(var):
     """
     while True:
 
-        value = (input("Enter {} in %: ".format(var)))
+        value = (input("Enter {} in %: \n".format(var)))
         try:
             return float(value)
             if 0 <= value >= 99:
