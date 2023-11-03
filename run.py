@@ -6,9 +6,9 @@ def display_instructions():
     print("\n####################################################\n")
     print("Welcome to the carbohydrate calculator for cat food!\n")
     print("####################################################\n")
-    print("Most dryt food for cats don't have the carb content listed but")
+    print("Most dry food for cats doesn't have the carb content listed but")
     print("for people with obese and diabetic cats it's important to know")
-    print("how much carbs the food contains.\n") 
+    print("how much carbs the food contains.\n")
     print("Use this interface to calculate the carb content of cat food.\n")
     print("Please enter the respective percentage from your cat food label,")
     print("using dot as decimal separator")
@@ -37,7 +37,7 @@ def get_user_input(var):
 
 def calculate_carbs(subtotal):
     """
-    We calculate the carb content by subtracting the total of the 
+    We calculate the carb content by subtracting the total of the
     entered values from 100 percent and print the result of the
     calculation to the terminal.
     """
