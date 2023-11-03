@@ -1,32 +1,245 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Carb Calculator for Dry Cat Food
 
-Welcome,
+## Introduction
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### Project Description
 
-## Reminders
+The [Carb Calculator for Dry Cat Food](https://cat-food-carb-calculator-6b47be69c58d.herokuapp.com/) is a tool for cat owners that enables the user to calculate the percentage of carbohydrates in dry cat food. 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### Project Purpose
 
-## Creating the Heroku app
+Cats are obligate carnivores, meaning they require meat in their diet and need little carbohydrates. Dry food diets can present many health challenges because they are typically high in fat, carbohydrates, and calories. In fact, a high-carb diet can lead to obesity and diabetes. Thus, it's quite important for cat owners, especially if they already have an obese and/or diabetic cat, to know how many carbs their beloved pet consumes. However, unfortunately it's not mandatory for cat food producers to label the carb content on their products. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The [Carb Calculator for Dry Cat Food](https://cat-food-carb-calculator-6b47be69c58d.herokuapp.com/) supports the pet owners by calculating the carb content of dry cat food. 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![Carb Calculator for Dry Cat Food](views/assets/readme-docs/carb-calc-start.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## User stories
 
-Connect your GitHub repository and deploy as normal.
+User story: As a user I want to know the carb content of cat food so that I can adjust the diet of my cat to avoid health issues.
 
-## Constraints
+End user goal: The user calculates the carb content of dry cat food.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+End business goal: The users' cat lives a long and healthy life.
+<hr>
 
----
+## Features
 
-Happy coding!
+### Start
+
+- When starting the Heroku app the user finds information about what the tool is about. 
+![Start](views/assets/readme-docs/carb-calc-start.png)
+
+### Input
+
+- When starting the Heroku app the user finds information about what the tool is about. The user is required to enter percentages of protein, fat, fiber, ash and moisture which can be found on the cat food packages.  ### Input
+
+- When starting the Heroku app the user finds information about what the tool is about. The user is required to enter percentages of protein, fat, fiber, ash and moisture which can be found on the cat food packages.   
+
+### Calculation
+
+When the above mentioned values are entered correctly, the tool calculates and carb content which is displayed to the user.
+
+![Home Page](assets/readme-docs/home.webp)
+
+
+
+
+
+### Contact us
+
+The Contact us page enables users to request more information about outdoor activities, listed on the activities page. It includes fields for name, email, and radio buttons to select.
+
+![Contact us Page](assets/readme-docs/contact.webp)
+
+
+
+## Future Features
+
+While the current version is fully functional, there are some ideas for future development:
+
+- Include map and directions
+- Add more information about the location
+- Add customer review connectivity (Tripadvisor, Google, or similar)
+- Add accommodation information & booking possibility
+- Add more service providers
+- Add live view & live weather conditions
+
+## Typography and color scheme
+
+The color scheme was selected to represent the prominent colors in nature: brown and green, which also harmonize very well with the images used on the site. These colors are often associated with warmth, comfort, and steadiness and are therefore well suited for a site that aims to attract people who seek recreation and nature experiences.
+
+Typography was chosen because of its soft and rounded letters that reflect a more calm or even old-fashioned style but are easy readable.
+Fonts Capriola and Merriweather from [Fontawesom](https://fontawesome.com/).
+
+## Technology
+
+- IDE: Code Anywhere
+- Repository: GitHub
+- Image editor: SnagIt
+- Image converter: [Birme](<https://www.birme.net/>)
+- Favicon generator:[Favicon Generator](https://favicon.io/)
+  
+
+
+## Testing
+
+### Validator Testing
+
+#### HTML
+
+No errors were returned when passing through the [W3C Markup validator](https://validator.w3.org/).
+
+#### CSS
+
+No errors were found when passing through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator
+
+#### Google Chrome Lighthouse Reports
+
+These reports presents the results of Lighthouse testing to assess the performance, accessibility, best practices and SEO of [Visit Järbo](https://claudiainsweden.github.io/visit-jarbo/index.html).
+
+The tests were executed using the Google Chrome browser's DevTools.
+All pages score very high in all areas. Details for each page can be found by clicking the expand button.
+![Lighthouse score](assets/readme-docs/Lighthouse-score.webp)
+
+<details>
+<summary>Lighthouse Report for page Home</summary>
+
+![Performance Home](assets/readme-docs/lighthouse_home.webp)
+</details>
+
+<details>
+<summary>Lighthouse Report for page Nature</summary>
+![Performance Nature](assets/readme-docs/lighthouse_nature.webp)
+</details>
+
+<details>
+<summary>Lighthouse Report for page Activities</summary>
+![Performance Activities](assets/readme-docs/lighthouse_activities.webp)
+</details>
+
+<details>
+<summary>Lighthouse Report for page Gallery</summary>
+![Performance Gallery](assets/readme-docs/lighthouse_gallery.webp)
+</details>
+
+<details>
+<summary>Lighthouse Report for page Contact us</summary>
+![Performance Contact us](assets/readme-docs/lighthouse_contact.webp)
+</details>
+
+### Manual Testing
+
+#### Features Testing
+
+| Feature  | Action |Result|
+| ------------- | ------------- |-------------|
+|Header|
+| Logo	  | Click  | Links to Home Page|
+| Navigation icon  | Click  | Opens Navigation menu |
+|Navigation bar  | Click on Home  | Opens Home page |
+|Navigation bar  | Click on Nature  | Opens Nature page |
+|Navigation bar  | Click on Activities | Opens Activities page |
+|Navigation bar| Click on Gallery  | Opens Gallery page |
+|Navigation bar| Click on Contact us| Opens Contact us page |
+|  |  | |
+| Footer  | | |
+| Social Media Section	| Click on Facebook icon |Opens Facebook in a new tab |
+| Social Media Section	| Click on X icon |Opens Twitter in a new tab |
+| Social Media Section	| Click on Instagram icon |Opens Instagram in a new tab |
+| Pages |  |
+| Activities page  | Click on Links in text  | Open links in new tab|
+| Contact us page  | Click Send  |Error message if field is empty|
+| Contact us page | Click on input field	|Green border and green input text |
+| Contact us page  | Click on Email field and write text only |Error message to enter email address|
+| Contact us page  | Click on Reset |Empties all fields |
+|Contact us page  | Click on Send |Redirects to confirmation page |
+
+
+## Browser Testing
+
+Functionality, links, layout, and responsiveness were tested with the following browsers without any issues:
+
+- Microsoft Edge Version 117.0.2045.47
+- Firefox Version 118.0.1
+- Brave Version 1.58.135
+- Google Chrome Version 116.0.5845.188
+  
+## Device Testing
+
+Functionality, links, layout, and responsiveness were tested on the following devices without any issues:
+
+- Dell Laptop 14" / 1920px x 1080px
+- HP Laptop 17" / 1920px x 1080px
+- Dell Screen 24" / 1920px x 1080px
+- Samsung Galaxy 22S Ultra / 3088px x 1440px
+- iPhone 8 / 1334px × 750px
+
+### Findings under testing
+
+- As users might want to receive information about more than one topic, checkboxes were initially used on the Contact us page. However, after some trials and Google research it turned out that this feature requires Javascript which was not part of the course so far.
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Main Branch
+- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+  
+The live link can be found here - <https://claudiainsweden.github.io/visit-jarbo/>
+
+## Credits
+
+### Content
+
+Idea, content and text are developed by myself.
+
+Inspiration for the layout from walkthrough project "Love Running" and default SharePoint page layouts.
+
+- Detailed information about what kind of fish there is to catch from [iFiske](https://www.ifiske.se/en/fishing-harnen-holmsjon-langsjon-m-fl-vatten.htm).
+- Information about percentage of forest in Sweden taken from [Visit Sweden](https://visitsweden.com/what-to-do/nature-outdoors/forest-bathing/).
+- Information about percentage of lakes in Sweden taken from [Skogskunskap/Forest knowledge](https://www.skogskunskap.se/hansyn/vatten-och-mark/om-hansyn-till-vatten-och-mark/vatten-i-sverige/)
+- Information about what animals can be seen at Wild Nordic taken from [Wild Nordic](https://wildnordic.se/en/home/)
+- Icons from [Font Awesome](https://fontawesome.com/)
+- Vector graphic for Favicon from [Vecteezy](https://www.vecteezy.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
+- Images converted to webp with [Birme](https://www.birme.net/)
+
+### Media
+
+All images showing "nature only" are photos taken by myself.
+Images including animals are from free sources as listed below:
+
+- Bear images: Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zdeněk Macháček</a> on <a href="https://unsplash.com/photos/Pt3asvL65Mg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Lynx image: Photo by <a href="https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Glen Hooper</a> on <a href="https://unsplash.com/photos/8LWtpfhGP4U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Fox image: Photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vincent van Zalinge</a> on <a href="https://unsplash.com/photos/cHhPjhOe8LA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Moose image: Photo by <a href="https://unsplash.com/@thejohnnyme?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nikola Johnny Mirkovic</a> on <a href="https://unsplash.com/photos/VFgxrL65zNI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Deer image: Photo by <a href="https://unsplash.com/@lassenystedtfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lasse Nystedt</a> on <a href="https://unsplash.com/photos/FftpQKKGxOc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+### Code
+
+Initially, a lot of the code was copied from the Walkthrough project "Love Running" and changed during the project to fit this site.
+
+- Copied Asterisk wildcard selector from the Walkthrough project "Love Running"
+- Header & navigation copied from the Walkthrough project "Love Running"
+- Footer copied from the Walkthrough project "Love Running"
+- Gallery copied from the Walkthrough project "Love Running"
+- Contact us page copied from the Walkthrough project "Love Running"
+- Index page copied from the Walkthrough project "Love Running"
+  
+  #### Inspiration and tutorials used from
+
+  - [W3Schools](https://www.w3schools.com/)
+  - [Mdn Web Docs](<https://developer.mozilla.org/en-US/>)
+  - [Stack overflow](https://stackoverflow.com/)
+  - Code Institute Slack Channel
+    - Special thanks to Craig Hudson, my fellow student Niclas Hugdahl, and my mentor Rohit Sharma
+
+
+  #### Templates and tutorial for creating the readme-file
+
+  - [bezebee - My First Project](https://github.com/bezebee/My-First-Project/blob/main/README.md)
+  - [Drupal Wiki](https://www.drupal.org/docs/develop/managing-a-drupalorg-theme-module-or-distribution-project/documenting-your-project/readmemd-template)
+  - [GitHub Docs](https://docs.github.com/en)

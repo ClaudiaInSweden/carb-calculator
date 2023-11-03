@@ -24,7 +24,6 @@ def get_user_input(var):
     values are valid.
     """
     while True:
-     
         try:
             value = float(input("Enter {} in %: \n".format(var)))
             if 0 <= value <= 99:
@@ -43,22 +42,22 @@ def calculate_carbs(subtotal):
     calculation to the terminal.
     """
     carbs = 100 - subtotal
-    print(f"\nThe cat food contains {carbs} % carbs.\n")
-    return carbs
+    carbs_rounded = round(carbs, 1)
+    print(f"\nThe cat food contains {carbs_rounded} % carbs.\n")
+    return carbs-carbs_rounded
 
 
 def calculate_carbs_in_cat_food():
     """
-    The following variables are taken as input from the user:
+        The following variables are taken as input from the user:
     """
     protein = get_user_input("protein")
     fat = get_user_input("fat")
     fiber = get_user_input("fiber")
     ash = get_user_input("ash")
     moisture = get_user_input("moisture")
-    """
-    We need the sum of the entered values to calculate the carb content
-    """
+
+    # We need the sum of the entered values to calculate the carb content
     subtotal = protein + fat + fiber + ash + moisture
     carb_result = calculate_carbs(subtotal)
     food_content = [protein, fat, fiber, ash, moisture, carb_result]
@@ -66,7 +65,7 @@ def calculate_carbs_in_cat_food():
 
 if __name__ == '__main__':
     """
-    Executes code when file runs as a script
+        Executes code when file runs as a script
     """
     display_instructions()
     calculate_carbs_in_cat_food()
