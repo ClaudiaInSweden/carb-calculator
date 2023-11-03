@@ -6,13 +6,14 @@ def display_instructions():
     print("\n####################################################\n")
     print("Welcome to the carbohydrate calculator for cat food!\n")
     print("####################################################\n")
-    print("Most cat foods don't have the carb content listed but")
+    print("Most dryt food for cats don't have the carb content listed but")
     print("for people with obese and diabetic cats it's important to know")
     print("how much carbs the food contains.\n") 
-    print("Use this interface to calculate the carb content of dry cat food.\n")
+    print("Use this interface to calculate the carb content of cat food.\n")
     print("Please enter the respective percentage from your cat food label,")
     print("using dot as decimal separator")
     print("Example: Crude Protein/Protein in %: 12.5\n")
+
 
 def get_user_input(var):
     """
@@ -28,11 +29,12 @@ def get_user_input(var):
         try:
             return float(value)
             if 0 <= value >= 99:
-                raise ValueError("Please enter a positive number between 0 and 100.")
+                raise ValueError("Please enter a number between 0 and 100.")
         except ValueError as e:
-            print("Value Error! Please enter a positive number between 0 and 100.\n")
+            print("Value Error! Please enter a number between 0 and 100.\n")
             continue
-           
+
+
 def calculate_carbs(subtotal):
     """
     We calculate the carb content by subtracting the total of the 
@@ -42,6 +44,7 @@ def calculate_carbs(subtotal):
     carbs = 100 - subtotal
     print(f"\nThe cat food contains {carbs} % carbs.\n")
     return carbs
+
 
 def calculate_carbs_in_cat_food():
     """
@@ -58,7 +61,8 @@ def calculate_carbs_in_cat_food():
     subtotal = protein + fat + fiber + ash + moisture
     carb_result = calculate_carbs(subtotal)
     food_content = [protein, fat, fiber, ash, moisture, carb_result]
-    
+
+
 if __name__ == '__main__':
     """
     Executes code when file runs as a script
