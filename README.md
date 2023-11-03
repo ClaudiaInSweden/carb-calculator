@@ -88,26 +88,18 @@ TO BE UPDATED!!!
 
 | Feature  | Action |Result|
 | ------------- | ------------- |-------------|
-|Header|
-| Logo	  | Click  | Links to Home Page|
-| Navigation icon  | Click  | Opens Navigation menu |
-|Navigation bar  | Click on Home  | Opens Home page |
-|Navigation bar  | Click on Nature  | Opens Nature page |
-|Navigation bar  | Click on Activities | Opens Activities page |
-|Navigation bar| Click on Gallery  | Opens Gallery page |
-|Navigation bar| Click on Contact us| Opens Contact us page |
-|  |  | |
-| Footer  | | |
-| Social Media Section	| Click on Facebook icon |Opens Facebook in a new tab |
-| Social Media Section	| Click on X icon |Opens Twitter in a new tab |
-| Social Media Section	| Click on Instagram icon |Opens Instagram in a new tab |
-| Pages |  |
-| Activities page  | Click on Links in text  | Open links in new tab|
-| Contact us page  | Click Send  |Error message if field is empty|
-| Contact us page | Click on input field	|Green border and green input text |
-| Contact us page  | Click on Email field and write text only |Error message to enter email address|
-| Contact us page  | Click on Reset |Empties all fields |
-|Contact us page  | Click on Send |Redirects to confirmation page |
+|Start|
+| Interface	  | Loading  | The interface shows two rows on top saying "Just one moment ...Running startup command: python3 run.py"|
+| Interface  | Display  | Shows title of the app and introduction text to the user |
+|Input area  |   |  |
+| Input  | The user enters a positive integer  | The number is displayed below the enter command |
+| Input  | The user enters a decimal number, with dot as separator  | The number is displayed below the enter command |
+| Input  | The user enters a decimal number, with comma as separator  | The number is displayed below the enter command |
+| Input  | The user enters a number  | The number is displayed below the enter command |
+| Input  | The user enters a number  | The number is displayed below the enter command |
+
+
+
 
 
 ## Browser Testing

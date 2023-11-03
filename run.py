@@ -26,12 +26,12 @@ def get_user_input(var):
     while True:
         try:
             value = float(input("Enter {} in %: \n".format(var)))
-            if 0 <= value <= 99:
+            if 1 <= value <= 99:
                 return value
             else:
-                print("Please enter a number between 0 and 100.\n")
+                print("Please enter a number between 1 and 99.\n")
         except ValueError as e:
-            print("Value Error! Please enter a number between 0 and 100.\n")
+            print("Value Error! Please enter a number between 1 and 99.\n")
             continue
 
 
