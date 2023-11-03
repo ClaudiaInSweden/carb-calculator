@@ -43,12 +43,21 @@ def get_user_input(var):
    
     while True:
 
-        value = input("Enter {} in %: ".format(var))
+        value = float(input("Enter {} in %: ".format(var)))
         try:
-            return float(value)
-        except ValueError:
-            print("Value Error! Please enter a valid number.\n")
-            continue
+            if value > 99:
+                raise ValueError
+            elif value < 0:
+                raise ValueError
+
+        except ValueError as e:
+            print(f"Value Error! Please enter a positive number between 0 and 100.\n")
+            return False
+
+        return True
+        
+
+
 
 protein = get_user_input("protein")
 fat = get_user_input("fat")
@@ -74,23 +83,6 @@ carb_result = calculate_carbs(subtotal)
 food_content = [protein, fat, fiber, ash, moisture, carb_result]
 print(food_content)
 
-"""
-We ask the user if the user wants to enter further data. If no, the loop breaks.
-If yes or any other key is pressed, the user is asked to once more enter the
-five values.
-"""    
-# Choice y not working!!!
-
-def user_choice_continue():
-    
-    while True:
-        choice = input("Would you like to check another product? ( y / n ) : ")
-        if choice.casefold() == 'n':
-            break
-        else: 
-            confirmation = get_user_input(var)
-
-user_choice_continue()
             
 # Add data to excel sheet not yet created!!!
 
